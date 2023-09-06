@@ -4,36 +4,36 @@
 }
 
 :root {
-  --purple-light-1: #fbfafb;
-  --purple-light-2: #eeeaf2;
-  --purple-medium-1: #aa83c8;
-  --purple-medium-2: #8b48bf;
-  --purple-medium-3: #5c218a;
-  --purple-dark-1: #3e0f64;
-  --purple-dark-2: #2a0646;
+  --pink-light-1: #fbfafb;
+  --pink-light-2: #ffffffd7;
+  --pink-medium-1: #ff88d5;
+  --pink-medium-2: #ff4faa;
+  --pink-medium-3: #fe00a5;
+  --pink-dark-1: #ff00c3;
+  --pink-dark-2: #ff00aa;
 
-  --yellow: #eecc75;
-  --green: #cad297;
-  --aqua: #b7eac5;
-  --lightBlue: #a2eee5;
-  --darkBlue: #8ea2ea;
-  --red: #f09d9d;
+  --yellow: #fffc64;
+  --green: #6ebb5f;
+  --aqua: #b0ffc5;
+  --lightBlue: #1effe5;
+  --darkBlue: #436bfb;
+  --red: #ff4545;
 
-  --font-family-titles: "Dosis", sans-serif;
-  --font-family-text: "Red Hat Display", sans-serif;
-  --font-weight-title1: 800;
+  --font-family-titles: "Poppins", sans-serif;
+  --font-family-text: "Poppins", sans-serif;
+  --font-weight-title1: 900;
   --font-weight-title2: 700;
   --font-weight-text1: 400;
-  --font-weight-text2: 500;
+  --font-weight-text2: 600;
 }
 
 html {
-  background-color: var(--purple-medium-3);
+  background-color: var(--pink-medium-3);
 }
 
 body {
-  background-color: var(--purple-light-1);
-  color: var(--purple-dark-2);
+  background-color: rgb(12, 12, 12);
+  color: black;
   font-family: var(--font-family-text);
   font-weight: var(--font-weight-text1);
   font-size: 16px;
@@ -48,10 +48,9 @@ h3 {
   padding: 0;
 }
 
-h1,
-h2 {
-  font-size: 24px;
-  color: var(--purple-dark-2);
+h1 {
+  font-size: 30px;
+  color: var(--pink-medium-3);
   font-family: var(--font-family-titles);
   font-weight: var(--font-weight-title1);
   margin: 0;
@@ -60,18 +59,18 @@ h2 {
 
 h2 {
   font-size: 18px;
-  color: var(--purple-dark-1);
+  color: var(--pink-dark-1);
   font-weight: var(--font-weight-title2);
 }
 
 h3 {
-  color: var(--purple-dark-2);
+  color: var(--pink-medium-1);
   font-weight: var(--font-weight-text2);
   font-size: 16px;
 }
 
 input {
-  background-color: var(--purple-light-2);
+  background-color: rgba(255, 255, 255, 0.109);
   color: var(--purple-medium-2);
   border: none;
   font-size: 18px;
@@ -79,14 +78,14 @@ input {
 }
 
 input::placeholder {
-  color: var(--purple-medium-1);
+  color: var(--pink-light-1);
   font-family: var(--font-family-text);
 }
 
 button {
-  background-color: var(--purple-dark-1);
+  background-color: var(--pink-medium-3);
   border: none;
-  color: var(--purple-light-2);
+  color: var(--pink-light-2);
   font-weight: var(--font-weight-text2);
   font-size: 14px;
   cursor: pointer;
@@ -167,7 +166,7 @@ footer {
   display: inline-block;
 }
 .header-arrow--white {
-  color: var(--purple-light-1);
+  color: var(--pink-light-1);
 }
 
 .header-searchForm {
@@ -181,8 +180,8 @@ footer {
 .header-searchForm input {
   height: 48px;
   width: 100%;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
 }
 .header-searchForm button {
   width: 56px;
@@ -199,7 +198,7 @@ footer {
 }
 
 .trendingPreview-btn {
-  border-radius: 8px;
+  border-radius: 24px;
   height: 32px;
   width: 72px;
 }
@@ -216,6 +215,12 @@ footer {
 .trendingPreview-movieList .movie-container {
   display: inline-block;
   margin-right: 8px;
+}
+@media (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 1024px) {
 }
 
 .trendingPreview-movieList .movie-container .movie-img {
@@ -266,10 +271,10 @@ footer {
   --idColor: var(--darkBlue);
 }
 #id99 {
-  --idColor: var(--purple-dark-1);
+  --idColor: var(--pink-dark-1);
 }
 #id18 {
-  --idColor: var(--purple-medium-1);
+  --idColor: var(--pink-medium-1);
 }
 #id10751 {
   --idColor: var(--yellow);
@@ -287,10 +292,10 @@ footer {
   --idColor: var(--darkBlue);
 }
 #id9648 {
-  --idColor: var(--purple-dark-1);
+  --idColor: var(--pink-dark-1);
 }
 #id10749 {
-  --idColor: var(--purple-medium-1);
+  --idColor: var(--pink-medium-1);
 }
 #id878 {
   --idColor: var(--yellow);
@@ -334,7 +339,7 @@ footer {
   margin-top: 403px;
   z-index: 1;
   position: absolute;
-  background-color: var(--purple-light-1);
+  background-color: var(--pink-light-1);
 }
 
 .movieDetail-title {
@@ -394,8 +399,8 @@ footer {
 
 /* Footer */
 footer {
-  background-color: var(--purple-medium-3);
-  color: var(--purple-light-2);
+  background-color: var(--pink-medium-3);
+  color: var(--pink-light-2);
   text-align: center;
   height: 48px;
   display: flex;
