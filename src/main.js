@@ -10,6 +10,15 @@ const api = axios.create({
 
 // Utils
 
+const lazyLoader = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const url = entry.target.getAttribute("data-img");
+      entry.target.setAttribute("src", url);
+    }
+  });
+});
+
 function createMovies(movies, container) {
   container.innerHTML = "";
 
@@ -24,9 +33,11 @@ function createMovies(movies, container) {
     movieImg.classList.add("movie-img");
     movieImg.setAttribute("alt", movie.title);
     movieImg.setAttribute(
-      "src",
+      "data-img",
       "https://image.tmdb.org/t/p/w300" + movie.poster_path
     );
+
+    lazyLoader.observe(movieImg);
 
     movieContainer.appendChild(movieImg);
     container.appendChild(movieContainer);
