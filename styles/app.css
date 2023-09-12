@@ -134,6 +134,7 @@ footer {
 
 .movie-img {
   border-radius: 8px;
+  min-height: 175px;
 }
 
 .categoriesPreview-list,
@@ -143,6 +144,13 @@ footer {
   justify-content: space-between;
   position: relative;
   flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .categoriesPreview-list,
+  .categories-list {
+    justify-content: space-evenly;
+  }
 }
 
 .category-container--loading {
@@ -264,6 +272,17 @@ footer {
 /* Categories */
 .category-container {
   width: 45%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .category-container {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-container {
+    width: 15%;
+  }
 }
 
 .category-title {
