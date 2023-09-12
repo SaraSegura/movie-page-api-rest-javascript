@@ -1,3 +1,4 @@
+let maxPage;
 let page = 1;
 let infiniteScroll;
 
@@ -87,6 +88,7 @@ function categoriesPage() {
   headerCategoryTitle.innerHTML = categoryName;
 
   getMoviesByCategory(categoryid);
+  infiniteScroll = getPaginatedMoviesByCategory(categoryid);
 }
 
 function movieDetailsPage() {
@@ -128,6 +130,8 @@ function SearchPage() {
 
   const [_, query] = location.hash.split("=");
   getMoviesBySearch(query);
+
+  infiniteScroll = getPaginatedMoviesBySearch(query);
 }
 
 function trendsPage() {
