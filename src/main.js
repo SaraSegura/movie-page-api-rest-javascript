@@ -8,6 +8,30 @@ const api = axios.create({
   },
 });
 
+function likedMoviesList() {
+  const item = JSON.parse(localStorage.getItem("liked_movies"));
+  let movies;
+
+  if (item) {
+    movies = item;
+  } else {
+    movies = {};
+  }
+  return movies;
+}
+
+function likeMovie(movie) {
+  const likedMovies = likedMoviesList();
+
+  if (likedMovies[movie.id]) {
+    likedMovies[movie.id] = undefined;
+  } else {
+    likedMovies[movie.id] = movie;
+  }
+
+  localStorage.setItem("liked_movies", JSON.stringify(likedMovies));
+}
+
 // Utils
 
 const lazyLoader = new IntersectionObserver((entries) => {
@@ -54,7 +78,7 @@ function createMovies(
     movieBtn.classList.add("movie-btn");
     movieBtn.addEventListener("click", () => {
       movieBtn.classList.toggle("movie-btn--liked");
-      //DEBERIAMOS AGREGAR LA PELICULAS A LS
+      likeMovie(movie);
     });
 
     if (lazyLoad) {
