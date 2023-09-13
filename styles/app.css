@@ -263,12 +263,38 @@ footer {
   flex-wrap: nowrap;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-searchForm {
+    justify-content: end;
+  }
+}
+@media (min-width: 1024px) {
+  .header-searchForm {
+    justify-content: end;
+  }
+}
+
 .header-searchForm input {
   height: 48px;
   width: 100%;
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-searchForm input {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .header-searchForm input {
+    height: 48px;
+    width: 30%;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+}
+
 .header-searchForm button {
   width: 56px;
   height: 48px;
