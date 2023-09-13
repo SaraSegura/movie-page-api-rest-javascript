@@ -153,6 +153,20 @@ footer {
   box-shadow: 0px 0px 20px 1px var(--pink-dark-2);
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .movie-btn {
+    top: 10px;
+    right: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie-btn {
+    top: 15px;
+    right: 30%;
+  }
+}
+
 .movie-btn::before {
   content: "🤍";
 }
